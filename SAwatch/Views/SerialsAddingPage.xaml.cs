@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SAwatch.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,17 @@ namespace SAwatch.Views
         public SerialsAddingPage()
         {
             InitializeComponent();
+            BindingContext = new Serials();
+        }
+
+        private async void AddSerialButton_Clicked(object sender, EventArgs e)
+        {
+            Serials serial = (Serials)BindingContext;
+            if (!string.IsNullOrWhiteSpace(serial.NameOfSerial) & !string.IsNullOrWhiteSpace(serial.NumberOfSeasons) & !string.IsNullOrWhiteSpace(serial.NumberOfSeries))
+            {
+                await App.SerialsDB.SaveSerialAsync(serial);
+            }
+            await Shell.Current.GoToAsync("..");
         }
     }
 }

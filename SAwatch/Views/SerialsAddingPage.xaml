@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SAwatch.Views.SerialsAddingPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="20">
+            <Editor Placeholder="Название сериала"
+                    Text="{Binding NameOfSerial}"
+                    HeightRequest="100"/>
+            <Editor Margin="20"
+                    Placeholder="Количество сезонов"
+                    Text="{Binding NumberOfSeasons}"
+                    HeightRequest="100"/>
+            <Editor Margin="20"
+                    Placeholder="Количество серий в сезоне"
+                    Text="{Binding NumberOfSeries}"
+                    HeightRequest="100"/>
+            <Button Text="Добавить"
+                    HorizontalOptions="Center"
+                    Clicked="AddSerialButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

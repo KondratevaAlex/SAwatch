@@ -10,10 +10,10 @@ namespace SAwatch.Models
     {
         [PrimaryKey, AutoIncrement]
         public int SerialsID { get; set; }
-        public int NumberOfSeasons { get; set; }
-        public int CurrentSeason { get; set; }
-        public int NumberOfSeries { get; set; }
-        public int CurrentSeria { get; set; }
+        public string NumberOfSeasons { get; set; }
+        public string CurrentSeason { get; set; }
+        public string NumberOfSeries { get; set; }
+        public string CurrentSeria { get; set; }
         public string NameOfSerial { get; set; }
 
     }

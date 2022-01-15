@@ -16,5 +16,21 @@ namespace SAwatch.Views
         {
             InitializeComponent();
         }
+        protected override async void OnAppearing()
+        {
+            collectionView.ItemsSource = await App.SerialsDB.GetSerialsAsync();
+
+            base.OnAppearing();
+        }
+
+        private async void OnAddSerialButton_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(SerialsAddingPage));
+        }
+
+        private void OnFinishedSerialButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

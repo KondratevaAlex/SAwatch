@@ -2,11 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SAwatch.Views.SerialsPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"
+                     Clicked="OnAddSerialButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <CollectionView x:Name="collectionView"
+                    Margin="20">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical"
+                               ItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout BackgroundColor="AliceBlue"
+                             Padding="20, 20, 20, 0">
+                    <FlexLayout Direction="Row">
+                        <Button FontSize="Large"
+                                HorizontalOptions="Start"
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                Clicked="OnFinishedSerialButton_Clicked"/>
+                        <Label Text="{Binding NameOfSerial}"
+                               FontSize="Medium"
+                               HorizontalOptions="Start"
+                               Padding="20,10,0,0"/>
+                    </FlexLayout>
+                    <FlexLayout Direction="Row">
+                        <Label Text="{Binding NumberOfSeasons}"
+                               FontSize="Medium"
+                               HorizontalOptions="Center"
+                               Padding="100,0,0,0"/>
+                        <Label Text="{Binding NumberOfSeries}"
+                               FontSize="Medium"
+                               HorizontalOptions="End"
+                               Padding="200,0,0,0"/>
+                    </FlexLayout>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>

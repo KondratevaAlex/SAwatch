@@ -18,6 +18,7 @@ namespace SAwatch
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(FilmsAddingPage), typeof(FilmsAddingPage));
+            Routing.RegisterRoute(nameof(SerialsAddingPage), typeof(SerialsAddingPage));
         }
     }
 }

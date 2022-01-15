@@ -15,6 +15,7 @@ namespace SAwatch.Views
     {
         public FilmsPage()
         {
+            Title = "Фильмы";
             InitializeComponent();
         }
         protected override async void OnAppearing() 

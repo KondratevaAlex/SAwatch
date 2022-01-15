@@ -16,18 +16,17 @@
             <DataTemplate>
                 <StackLayout BackgroundColor="AliceBlue"
                              Padding="20, 20, 20, 0">
-                    <Grid ColumnDefinitions="*,*">
+                    <FlexLayout Direction="Row">
                         <Button FontSize="Large"
                                 HorizontalOptions="Start"
-                                HeightRequest="70"
-                                WidthRequest="70"
+                                HeightRequest="50"
+                                WidthRequest="50"
                                 Clicked="OnFinishedFilmButton_Clicked"/>
-                        <Label Grid.Column="1" 
-                               Text="{Binding NameOfFilm}"
+                        <Label Text="{Binding NameOfFilm}"
                                FontSize="Medium"
                                HorizontalOptions="Start"
-                               Padding="20"/>
-                    </Grid>
+                               Padding="5,10,0,0"/>
+                    </FlexLayout>
                     <Label Text="{Binding DurationOfFilm}"
                            FontSize="Small"
                            HorizontalOptions="EndAndExpand"/>
