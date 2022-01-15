@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SAwatch.Views.FilmsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"
+                     Clicked="OnAddFilmButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <CollectionView x:Name="collectionView"
+                    Margin="20">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical"
+                               ItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout BackgroundColor="AliceBlue"
+                             Padding="20, 20, 20, 0">
+                    <Grid ColumnDefinitions="*,*">
+                        <Button FontSize="Large"
+                                HorizontalOptions="Start"
+                                HeightRequest="70"
+                                WidthRequest="70"
+                                Clicked="OnFinishedFilmButton_Clicked"/>
+                        <Label Grid.Column="1" 
+                               Text="{Binding NameOfFilm}"
+                               FontSize="Medium"
+                               HorizontalOptions="Start"
+                               Padding="20"/>
+                    </Grid>
+                    <Label Text="{Binding DurationOfFilm}"
+                           FontSize="Small"
+                           HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
