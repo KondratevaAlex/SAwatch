@@ -33,7 +33,8 @@ namespace SAwatch.Views
         {
             Button button = (Button)sender;
             button.Text = "+";
-            button.BackgroundColor = Color.CadetBlue;
+            button.TextColor = Color.FromHex("#ffff");
+            button.BackgroundColor = Color.FromHex("#6c638e");
         }
     }
 }

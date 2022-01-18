@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SAwatch.Views.FilmsPage">
+             x:Class="SAwatch.Views.FilmsPage"
+             BackgroundColor="#E9E1D4">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+"
-                     Clicked="OnAddFilmButton_Clicked"/>
+                     Clicked="OnAddFilmButton_Clicked"
+                     />
     </ContentPage.ToolbarItems>
     <CollectionView x:Name="collectionView"
                     Margin="20">
@@ -14,23 +16,30 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout BackgroundColor="AliceBlue"
+                <Frame CornerRadius="10"
+                       Padding="0,0,0,0">
+                    <StackLayout BackgroundColor="#c5c8d7"
                              Padding="20, 20, 20, 0">
                     <FlexLayout Direction="Row">
                         <Button FontSize="Large"
+                                BackgroundColor="#e9e1d4"
+                                CornerRadius="90"
                                 HorizontalOptions="Start"
                                 HeightRequest="50"
                                 WidthRequest="50"
                                 Clicked="OnFinishedFilmButton_Clicked"/>
                         <Label Text="{Binding NameOfFilm}"
                                FontSize="Medium"
+                               TextColor="#6c638e"
                                HorizontalOptions="Start"
-                               Padding="5,10,0,0"/>
+                               Padding="20,10,0,0"/>
                     </FlexLayout>
                     <Label Text="{Binding DurationOfFilm}"
                            FontSize="Small"
+                           TextColor="#6c638e"
                            HorizontalOptions="EndAndExpand"/>
-                </StackLayout>
+                    </StackLayout>
+                </Frame>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

@@ -1,8 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SAwatch.Views.AboutPage">
-    <Image Source="wolves.jpg" Aspect="AspectFill"/>
-    
-    
+             x:Class="SAwatch.Views.AboutPage"
+             BackgroundImageSource="wolves.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame CornerRadius="5"
+                   Margin="50,20,50,20"
+                   Padding="0"
+                   BackgroundColor="#ba93a6">
+                <Label Text="О разработчиках"
+                           Margin="20"
+                           HorizontalOptions="Center"
+                       TextColor="#e9e1d4"
+                           FontSize="Large"/>
+            </Frame>
+            <Frame CornerRadius="5"
+                   Margin="50,20,50,20"
+                   Padding="0"
+                   BackgroundColor="#ba93a6">
+                <StackLayout>
+                    <Label Text="Программу разработали студентки АлтГТУ им. И.И. Ползунова Земская Софья (ПИ-02) и Кондратьева Александра (ПИ-03)."
+                           Margin="20"
+                       TextColor="#e9e1d4"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"/>
+                    <Label Text="Кафедра: Прикладная математика."
+                           TextColor="#e9e1d4"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           Margin="20,0,10,20"/>
+                    <Label Text="Руководитель проекта: Троицкий Виктор Сергеевич."
+                           TextColor="#e9e1d4"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           Margin="20,0,10,20"/>
+                    <Label Text="Мы благодарим и ценим каждого пользователя!"
+                           TextColor="#e9e1d4"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           Margin="20,0,10,20"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+    </ContentPage.Content>
+
 </ContentPage>

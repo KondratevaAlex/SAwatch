@@ -2,12 +2,16 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SAwatch.AppShell"
-       xmlns:views="clr-namespace:SAwatch.Views">
-
+       xmlns:views="clr-namespace:SAwatch.Views"
+       BackgroundColor="#6c638e"
+       FlyoutBackgroundColor="#6c638e">
+    
     <Shell.FlyoutHeader>
-        <StackLayout BackgroundColor="Aqua"
-                     Padding="10">
-            <Label Text="Меню"/>
+        <StackLayout BackgroundColor="#6c638e"
+                     Padding="19">
+            <Label Text="Меню"
+                   FontSize="Large"
+                   Padding="60,0,0,0"/>
         </StackLayout>
     </Shell.FlyoutHeader>
 
@@ -18,9 +22,9 @@
     <FlyoutItem Title="Сериалы">
         <ShellContent ContentTemplate="{DataTemplate views:SerialsPage}"/>
     </FlyoutItem>
-    
-    <FlyoutItem Title="Средство от скуки">
 
+    <FlyoutItem Title="Средство от скуки">
+        <ShellContent ContentTemplate="{DataTemplate views:GamePage}"/>
     </FlyoutItem>
     
     <FlyoutItem Title="О приложении">

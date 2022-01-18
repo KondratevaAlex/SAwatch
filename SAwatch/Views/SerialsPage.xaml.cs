@@ -14,6 +14,7 @@ namespace SAwatch.Views
     {
         public SerialsPage()
         {
+            Title = "Сериалы";
             InitializeComponent();
         }
         protected override async void OnAppearing()
@@ -30,7 +31,10 @@ namespace SAwatch.Views
 
         private void OnFinishedSerialButton_Clicked(object sender, EventArgs e)
         {
-
+            Button button = (Button)sender;
+            button.Text = "+";
+            button.TextColor = Color.FromHex("#ffff");
+            button.BackgroundColor = Color.FromHex("#6c638e");
         }
     }
 }

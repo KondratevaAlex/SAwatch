@@ -9,10 +9,12 @@
                     HeightRequest="100"/>
             <Editor Margin="20"
                     Placeholder="Количество сезонов"
+                    Keyboard="Numeric"
                     Text="{Binding NumberOfSeasons}"
                     HeightRequest="100"/>
             <Editor Margin="20"
                     Placeholder="Количество серий в сезоне"
+                    Keyboard="Numeric"
                     Text="{Binding NumberOfSeries}"
                     HeightRequest="100"/>
             <Button Text="Добавить"

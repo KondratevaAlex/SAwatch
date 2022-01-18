@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SAwatch.Views.GamePage"
+             BackgroundColor="#e9e1d4">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Таймер: 30 секунд"
+                   HorizontalOptions="End"
+                   FontSize="Small"
+                   TextColor="#6c638e"
+                   Padding="20,20,20,0"/>
+            <Button Text="S&amp;A-watch"
+                    FontAttributes="Bold"
+                    BackgroundColor="#e9ab96"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

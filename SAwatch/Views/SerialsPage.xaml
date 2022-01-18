@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SAwatch.Views.SerialsPage">
+             x:Class="SAwatch.Views.SerialsPage"
+             BackgroundColor="#E9E1D4">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+"
                      Clicked="OnAddSerialButton_Clicked"/>
@@ -14,30 +15,38 @@
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout BackgroundColor="AliceBlue"
+                <Frame CornerRadius="10"
+                       Padding="0,0,0,0">
+                    <StackLayout BackgroundColor="#0b1b3d"
                              Padding="20, 20, 20, 0">
-                    <FlexLayout Direction="Row">
-                        <Button FontSize="Large"
+                        <FlexLayout Direction="Row">
+                            <Button FontSize="Large"
+                                    CornerRadius="90"
+                                    BackgroundColor="#e9e1d4"
                                 HorizontalOptions="Start"
                                 HeightRequest="50"
                                 WidthRequest="50"
                                 Clicked="OnFinishedSerialButton_Clicked"/>
-                        <Label Text="{Binding NameOfSerial}"
+                            <Label Text="{Binding NameOfSerial}"
                                FontSize="Medium"
+                                   TextColor="#c5c8d7"
                                HorizontalOptions="Start"
                                Padding="20,10,0,0"/>
-                    </FlexLayout>
-                    <FlexLayout Direction="Row">
-                        <Label Text="{Binding NumberOfSeasons}"
+                        </FlexLayout>
+                        <FlexLayout Direction="Row">
+                            <Label Text="{Binding NumberOfSeasons}"
                                FontSize="Medium"
+                                   TextColor="#c5c8d7"
                                HorizontalOptions="Center"
                                Padding="100,0,0,0"/>
-                        <Label Text="{Binding NumberOfSeries}"
+                            <Label Text="{Binding NumberOfSeries}"
                                FontSize="Medium"
+                                   TextColor="#c5c8d7"
                                HorizontalOptions="End"
                                Padding="200,0,0,0"/>
-                    </FlexLayout>
-                </StackLayout>
+                        </FlexLayout>
+                    </StackLayout>
+                </Frame>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

@@ -9,6 +9,7 @@
                     HeightRequest="100"/>
             <Editor Margin="20"
                     Placeholder="Длительность фильма (в минутах)"
+                    Keyboard="Numeric"
                     Text="{Binding DurationOfFilm}"
                     HeightRequest="100"/>
             <Button Text="Добавить"
